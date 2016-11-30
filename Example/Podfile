@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BFTask-PromiseKit_Example' do
+  pod 'BFTask-PromiseKit', :path => '../'
+
+  target 'BFTask-PromiseKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
