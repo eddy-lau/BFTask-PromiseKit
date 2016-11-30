@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint BFTask-PromiseKit.podspec' to ensure this is a
+# Be sure to run `pod lib lint Bolts-PromiseKit.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BFTask-PromiseKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of BFTask-PromiseKit.'
+  s.version          = '1.0.0'
+  s.summary          = 'To convert a BFTask to a Promise in the PromiseKit'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+An Objective-C extension for BFTask to convert it to a Promise in the PromiseKit.
+So a BFTask also have the powerful clean dot notation syntax of PromiseKit.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/BFTask-PromiseKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/eddy-lau/BFTask-PromiseKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Eddie Lau' => 'eddie@touchutility.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/BFTask-PromiseKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/eddy-lau/BFTask-PromiseKit.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '8.0'
+  s.source_files = 'BFTask-PromiseKit/*'
 
-  s.source_files = 'BFTask-PromiseKit/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'BFTask-PromiseKit' => ['BFTask-PromiseKit/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Bolts/Tasks', '~> 1.8'
+  s.dependency 'PromiseKit', '~> 4.0'
 end
