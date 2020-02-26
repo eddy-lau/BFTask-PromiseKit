@@ -12,7 +12,7 @@
 
 @implementation BFTask (PromiseKit)
 
-- (AnyPromise *) toPromise {
+- (AnyPromise * _Nonnull ) toPromise {
     
     AnyPromise *promise = [AnyPromise promiseWithAdapterBlock:^(PMKAdapter  _Nonnull adapter) {
         

@@ -11,6 +11,6 @@
 
 @interface BFTask (PromiseKit)
 
-- (AnyPromise *) toPromise;
+- (AnyPromise * _Nonnull ) toPromise;
 
 @end
