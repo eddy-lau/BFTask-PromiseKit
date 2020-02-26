@@ -74,7 +74,7 @@
         
         textLabel.text = result;
         
-    }).always(^() {
+    }).ensure(^() {
        
         [activityIndicator stopAnimating];
         activityIndicator.hidden = YES;

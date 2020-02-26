@@ -20,7 +20,12 @@
            
             if (t.isCancelled) {
                 
-                adapter(nil, [NSError cancelledError]);
+                NSError *err =
+                    [NSError errorWithDomain:PMKErrorDomain
+                                        code:-1
+                                    userInfo:@{NSLocalizedFailureReasonErrorKey:@"Cancelled"}];
+                
+                adapter(nil, err);
                 
             } else if (t.error) {
                 
